@@ -1,0 +1,23 @@
+form#add-device(action=locals.formTargetUrl,method='post',enctype='multipart/form-data').colorbox.box.round.shadow
+    fieldset(data-role='controlgroup')
+        legend= locals.formDescription
+        p
+            label(for='id') id
+                input(id='id',type='text',value=locals.id,name='id')
+        p
+            label(for='User') User
+                input(id='username',type='text',value=locals.username,name='username')
+        p
+            label(for='Hostname') Hostname
+                input(id='hostname',type='text',value=locals.hostname,name='hostname')
+        p
+            label(for='IP') IP
+                input(id='ip',type='text',value=locals.ip,name='ip')
+        p
+            label(for='Port') Port
+                input(id='port',type='text',value=locals.port,name='port')
+        p
+            label(for='File') SSH Key
+                input(id='filedata',type='file',placeholder='',name='filedata', size="12em").right
+        p
+            input(type='submit',value=locals.submitButtonName,data-transition='fade', data-theme='c').submit

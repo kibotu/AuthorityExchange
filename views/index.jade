@@ -1,0 +1,36 @@
+extends header
+
+block content
+  .container
+      .row
+          .twocol.box.round.shadow
+              p.center
+                a(href="/device-form")#add-device Add  New Device
+          .twocol.box.round.shadow
+              p.center
+                  a(href="#provide-devices")#provide-devices Provide Keys
+      .row
+          .sevencol.box.round.shadow
+              table#hosts.hosts(width='100%')
+                  tr
+                      th.center Select
+                      th Hostname
+                      th IP
+                      th Port
+                      th.center User
+                      th.center A-Keys
+                      th.center Edit
+                      th.center Delete
+          .fivecol.last.box.round.shadow
+              table#devices.hosts(width='100%')
+                  tr
+                      th.center Select
+                      th Hostname
+                      th IP
+                      th Port
+                      th.center Key
+        .row.hidden
+          .twocol
+          .eightcol.last.box.round.shadow
+              p Console
+                  textarea#console.alpha
